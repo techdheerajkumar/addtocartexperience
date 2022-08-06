@@ -1,0 +1,19 @@
+.card {
+    max-width: 292px;
+    transition: .2s;
+}
+
+.card:hover{
+    box-shadow: 0 0 5px #ccc;
+    transition: .2s;
+}
+
+.card figure{
+    height: 150px;
+    overflow: hidden;
+
+}
+.card img{
+    object-fit: contain;
+    height: 100%;
+}
