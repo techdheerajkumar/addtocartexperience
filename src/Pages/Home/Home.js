@@ -7,7 +7,7 @@ const Home = (props) => {
         <span>Top Rated Products</span>
       </h2>
       <div className="d-flex flex-wrap">
-        {props.products.map((item, index) => {
+        {props.products ? props.products.map((item, index) => {
           return item.rating.rate > 4.5 ? (
             <Card
               key={item.id}
@@ -21,7 +21,7 @@ const Home = (props) => {
           ) : (
             ""
           );
-        })}
+        }) : ''}
       </div>
       <div className="btn-wrapper text-center pb-5">
         <Link to="/products" className="btn btn-success mx-auto ">

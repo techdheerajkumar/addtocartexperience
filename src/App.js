@@ -8,6 +8,7 @@ import DetailPage from "./Pages/Detail/Detail";
 import Header from "./Components/Header/Header";
 import Products from "./Pages/Products/Products";
 import Cart from "./Pages/Cart/Cart";
+import Loader from './Loader'
 function App() {
   const [products, setProducts] = useState("");
   const [cart, setCart] = useState("");
@@ -51,7 +52,7 @@ function App() {
             <Route
               exact
               path="/"
-              element={<Home products={products} click={addToCart}/>}
+              element={products.length ?<Home products={products} click={addToCart}/> : <Loader />}
             ></Route>
             <Route
               exact
